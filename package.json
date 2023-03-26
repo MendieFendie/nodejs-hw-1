@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-hw-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MendieFendie/nodejs-hw-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MendieFendie/nodejs-hw-1/issues"
+  },
+  "homepage": "https://github.com/MendieFendie/nodejs-hw-1#readme",
+  "dependencies": {
+    "nanoid": "^2.1.11",
+    "nodemon": "^2.0.22",
+    "yargs": "^17.7.1"
+  }
+}
