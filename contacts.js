@@ -18,8 +18,8 @@ async function listContacts() {
 function getContactById(contactId) {
   try {
     return fs.readFile(contactsPath, "utf-8").then((data) => {
-      const contacts = JSON.parse(data);
-      console.table(contacts[contactId]);
+      const contacts = JSON.parse(data).filter((elem) => elem.id === contactId);
+      console.table(contacts);
     });
   } catch (error) {
     console.log(error);
@@ -33,6 +33,7 @@ async function removeContact(contactId) {
     contacts.splice(contactId, 1);
     await fs.writeFile(contactsPath, JSON.stringify(contacts));
     console.table(contacts);
+    return contacts;
   } catch (error) {
     console.log(error);
   }
